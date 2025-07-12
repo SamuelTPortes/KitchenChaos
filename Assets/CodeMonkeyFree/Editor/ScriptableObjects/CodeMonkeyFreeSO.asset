@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1752183462
+  lastShownTimestamp: 1752276443
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1752183462
+  checkedLastUpdateTimestamp: 1752276444
   lastQOTDResponse:
     questionId: 199
     questionText: 'Does this code compile?
@@ -34,18 +34,18 @@ MonoBehaviour:
     answerC: Yes if target is not null
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1752183462
+  lastQotdTimestamp: 1752276444
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/summer2025CodeMonkeyBundle.png
     topText: All my Courses (and Games) in one Bundle! DEEP DISCOUNT ONLY THIS SUMMER!
     topLink: summer2025bundle
     bottomText: AWESOME NEW Unity Bundle with Tools and Assets 97% OFF!
     bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1752183462
+  lastDynamicHeaderTimestamp: 1752276444
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1752183462
+  websiteLatestMessageTimestamp: 1752276444
   websiteLatestVideos:
     videos:
     - youTubeId: ALogEuL6QdA
@@ -56,4 +56,4 @@ MonoBehaviour:
       title: The BEST Worldbuilding Tool is FREE! (ENDS SOON!)
     - youTubeId: mdjap-NtkWs
       title: TOP 10 NEW Games, Made with Unity! (JUNE 2025)
-  websiteLatestVideosTimestamp: 1752183462
+  websiteLatestVideosTimestamp: 1752276444
