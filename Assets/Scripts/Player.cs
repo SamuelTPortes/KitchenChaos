@@ -33,5 +33,7 @@ public class Player : MonoBehaviour
 
         transform.position += moveDir * moveSpeed * Time.deltaTime;
 
+        transform.forward = moveDir;
+
     }
 }
