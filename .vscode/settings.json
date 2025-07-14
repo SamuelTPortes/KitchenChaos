@@ -66,5 +66,27 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
     },
-    "dotnet.defaultSolution": "Kitchen.sln"
+    "dotnet.defaultSolution": "Kitchen.sln",
+    
+    // Configurações de formatação C#
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "omnisharp.enableImportCompletion": true,
+    
+    // Configurações de formatação
+    "[csharp]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.formatOnPaste": true
+    },
+    
+    // Configurações específicas de estilo C#
+    "csharp.format.enable": true,
+    "csharp.semanticHighlighting.enabled": true,
+    
+    // Configurações de chaves (para evitar quebra de linha automática)
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+    "omnisharp.organizeImportsOnFormat": true
 }
