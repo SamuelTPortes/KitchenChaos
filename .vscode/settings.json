@@ -71,7 +71,6 @@
     // Configurações de formatação C#
     "omnisharp.enableRoslynAnalyzers": true,
     "omnisharp.enableEditorConfigSupport": true,
-    "omnisharp.enableImportCompletion": true,
     
     // Configurações de formatação
     "[csharp]": {
@@ -88,5 +87,5 @@
     
     // Configurações de chaves (para evitar quebra de linha automática)
     "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
-    "omnisharp.organizeImportsOnFormat": true
+    "dotnet.formatting.organizeImportsOnFormat": true
 }
