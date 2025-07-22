@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3424134278083792955}
   m_Layer: 0
-  m_Name: Tomato
+  m_Name: CheeseBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3812876574508226177, guid: 81e9fe7b3cd084242a088e945f531f38, type: 3}
       propertyPath: m_Name
-      value: Tomato_Visual
+      value: Cheese_Visual
+      objectReference: {fileID: 0}
+    - target: {fileID: 5961162142393329408, guid: 81e9fe7b3cd084242a088e945f531f38, type: 3}
+      propertyPath: m_Name
+      value: CheeseBlock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
