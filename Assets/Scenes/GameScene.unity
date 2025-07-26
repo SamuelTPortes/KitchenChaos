@@ -573,9 +573,17 @@ PrefabInstance:
       value: ClearCounter 2
       objectReference: {fileID: 0}
     - target: {fileID: 769892522104187421, guid: 5a521f158b004af479422adf740417ae, type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 769892522104187421, guid: 5a521f158b004af479422adf740417ae, type: 3}
       propertyPath: kitchenObjectSO
       value: 
       objectReference: {fileID: 11400000, guid: 31983ce73614c6d4a82eeabeec5f6270, type: 2}
+    - target: {fileID: 769892522104187421, guid: 5a521f158b004af479422adf740417ae, type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 969568730}
     - target: {fileID: 3945445230941611188, guid: 5a521f158b004af479422adf740417ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.49
@@ -670,6 +678,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &969568730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 769892522104187421, guid: 5a521f158b004af479422adf740417ae, type: 3}
+  m_PrefabInstance: {fileID: 4824875870138774319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c2a042d20427c499f3c857c90ee0ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753509843
 GameObject:
   m_ObjectHideFlags: 0
