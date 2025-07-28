@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BaseCounter : BaseCounter, IKitchenObjectParent {
+public class ClearCounter : BaseCounter, IKitchenObjectParent {
 
 
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
@@ -8,7 +8,8 @@ public class BaseCounter : BaseCounter, IKitchenObjectParent {
 
     private KitchenObject kitchenObject;
 
-    public void Interact(Player player) {
+
+    public override void Interact(Player player) {
 
         if (kitchenObject == null) {
             Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab, counterTopPoint);
