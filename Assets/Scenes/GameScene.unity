@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6735252691631694273, guid: aacfd7782ae22784ba6a339c52120f2e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8907999242138826717, guid: aacfd7782ae22784ba6a339c52120f2e, type: 3}
       propertyPath: m_Name
       value: ClearCounter (1)
@@ -766,6 +770,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7691178233247307066, guid: 0680edb8c0a7ca8488b8b680f8d5c9ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7839979859538110485, guid: 0680edb8c0a7ca8488b8b680f8d5c9ca, type: 3}
       propertyPath: m_Name
       value: ContainerCounter
@@ -836,6 +844,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6873077695737000548, guid: 0680edb8c0a7ca8488b8b680f8d5c9ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691178233247307066, guid: 0680edb8c0a7ca8488b8b680f8d5c9ca, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
