@@ -1,11 +1,7 @@
 using UnityEngine;
 
-public class ContainerCounter : BaseCounter, IKitchenObjectParent {
+public class ContainerCounter : BaseCounter {
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
-    [SerializeField] private Transform counterTopPoint;
-
-    private KitchenObject kitchenObject;
-
 
     public override void Interact(Player player) {
         if (kitchenObject == null) {
@@ -17,24 +13,4 @@ public class ContainerCounter : BaseCounter, IKitchenObjectParent {
         }
     }
 
-
-    public Transform GetKitchenObjectFollowTransform() {
-        return counterTopPoint;
-    }
-
-    public void SetKitchenObject(KitchenObject kitchenObject) {
-        this.kitchenObject = kitchenObject;
-    }
-
-    public KitchenObject GetKithenObject(KitchenObject kitchenObject) {
-        return kitchenObject;
-    }
-
-    public void ClearKitchenObject() {
-        kitchenObject = null;
-    }
-
-    public bool HasKitchenObject() {
-        return kitchenObject != null;
-    }
 }
