@@ -1,40 +1,15 @@
 using UnityEngine;
 
-public class ContainerCounter : BaseCounter, IKitchenObjectParent {
-    [SerializeField] private KitchenObjectSO kitchenObjectSO;
-    [SerializeField] private Transform counterTopPoint;
+public class ContainerCounter : BaseCounter {
 
-    private KitchenObject kitchenObject;
+    
+    [SerializeField] private KitchenObjectSO kitchenObjectSO;
 
 
     public override void Interact(Player player) {
-        if (kitchenObject == null) {
-            Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab, counterTopPoint);
-            kitchenObjectTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(this);
-        } else {
-            //Entrega comida para o player
-            kitchenObject.SetKitchenObjectParent(player);
+        if (!HasKitchenObject()){
+            Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);
+            kitchenObjectTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(player);
         }
-    }
-
-
-    public Transform GetKitchenObjectFollowTransform() {
-        return counterTopPoint;
-    }
-
-    public void SetKitchenObject(KitchenObject kitchenObject) {
-        this.kitchenObject = kitchenObject;
-    }
-
-    public KitchenObject GetKithenObject(KitchenObject kitchenObject) {
-        return kitchenObject;
-    }
-
-    public void ClearKitchenObject() {
-        kitchenObject = null;
-    }
-
-    public bool HasKitchenObject() {
-        return kitchenObject != null;
     }
 }
