@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class BaseCounter : MonoBehaviour, IKitchenObjectParent
 {
     
@@ -13,8 +14,6 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent
     {
         Debug.LogError("BaseCounter.Interact();");
     }
-
-
 
     public Transform GetKitchenObjectFollowTransform()
     {
