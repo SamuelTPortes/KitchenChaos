@@ -142,7 +142,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
         this.kitchenObject = kitchenObject;
     }
 
-    public KitchenObject GetKithenObject(KitchenObject kitchenObject) {
+    public KitchenObject GetKitchenObject() {
         return kitchenObject;
     }
 
