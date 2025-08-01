@@ -3,12 +3,10 @@ using Unity.VisualScripting;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
-public class CuttingCounter : BaseCounter
-{
+public class CuttingCounter : BaseCounter {
 
     public event EventHandler<OnProgressChangedEventArgs> OnProgressChanged;
-    public class OnProgressChangedEventArgs : EventArgs
-    {
+    public class OnProgressChangedEventArgs : EventArgs {
         public float progressNormalized;
     }
 
@@ -19,52 +17,38 @@ public class CuttingCounter : BaseCounter
 
     private int cuttingProgress;
 
-    public override void Interact(Player player)
-    {
-        if (!HasKitchenObject())
-        {
+    public override void Interact(Player player) {
+        if (!HasKitchenObject()) {
             //Há uma comida aqui
-            if (player.HasKitchenObject())
-            {
+            if (player.HasKitchenObject()) {
                 //Jogador está carregando algo
-                if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSO()))
-                {
+                if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSO())) {
                     // Jogador carregando algo que pode ser cortado
                     player.GetKitchenObject().SetKitchenObjectParent(this);
                     cuttingProgress = 0;
 
                     CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
 
-                    OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
-                    {
+                    OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs {
                         progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
                     });
                 }
-            }
-            else
-            {
+            } else {
                 //O Jogador não está segurando nada.
             }
-        }
-        else
-        {
+        } else {
             //Há uma comida aqui
-            if (player.HasKitchenObject())
-            {
+            if (player.HasKitchenObject()) {
                 //Jogador está carregando algo
-            }
-            else
-            {
+            } else {
                 //O Jogador não está segurando nada.
                 GetKitchenObject().SetKitchenObjectParent(player);
             }
         }
     }
 
-    public override void InteractAlternate(Player player)
-    {
-        if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO()))
-        {
+    public override void InteractAlternate(Player player) {
+        if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO())) {
             // Eis aqui o Kitchen Object(A comida)
             cuttingProgress++;
 
@@ -72,8 +56,7 @@ public class CuttingCounter : BaseCounter
 
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
 
-            OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs
-            {
+            OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs {
                 progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
             });
 
@@ -89,31 +72,23 @@ public class CuttingCounter : BaseCounter
         }
     }
 
-    private bool HasRecipeWithInput(KitchenObjectSO inputKitchenObjectSO)
-    {
+    private bool HasRecipeWithInput(KitchenObjectSO inputKitchenObjectSO) {
         CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(inputKitchenObjectSO);
         return cuttingRecipeSO != null;
     }
 
-    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO)
-    {
+    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO) {
         CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(inputKitchenObjectSO);
-        if (cuttingRecipeSO != null)
-        {
+        if (cuttingRecipeSO != null) {
             return cuttingRecipeSO.output;
-        }
-        else
-        {
+        } else {
             return null;
         }
     }
 
-    private CuttingRecipeSO GetCuttingRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO)
-    {
-        foreach (CuttingRecipeSO cuttingRecipeSO in cuttingRecipeSOArray)
-        {
-            if (cuttingRecipeSO.input == inputKitchenObjectSO)
-            {
+    private CuttingRecipeSO GetCuttingRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO) {
+        foreach (CuttingRecipeSO cuttingRecipeSO in cuttingRecipeSOArray) {
+            if (cuttingRecipeSO.input == inputKitchenObjectSO) {
                 return cuttingRecipeSO;
             }
         }
