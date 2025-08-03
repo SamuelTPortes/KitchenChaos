@@ -37,6 +37,12 @@ public class CuttingCounter : BaseCounter, IHasProgress {
             //Há uma comida aqui
             if (player.HasKitchenObject()) {
                 //Jogador está carregando algo
+                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject)) {
+                    //Jogador está segurando um pratinho
+                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO())) {
+                        GetKitchenObject().DestroySelf();
+                    }
+                }
             } else {
                 //O Jogador não está segurando nada.
                 GetKitchenObject().SetKitchenObjectParent(player);
