@@ -5,38 +5,36 @@ public class ClearCounter : BaseCounter {
 
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
 
-    public override void Interact(Player player)
-    {
+    public override void Interact(Player player) {
 
-        if (!HasKitchenObject())
-        {
+        if (!HasKitchenObject()) {
             //Há uma comida aqui
-            if (player.HasKitchenObject())
-            {
+            if (player.HasKitchenObject()) {
                 //Jogador está carregando algo
                 player.GetKitchenObject().SetKitchenObjectParent(this);
-            }
-            else
-            {
+            } else {
                 //O Jogador não está segurando nada.
             }
-        }
-        else
-        {
+        } else {
             //Há uma comida aqui
-            if (player.HasKitchenObject())
-            {
+            if (player.HasKitchenObject()) {
                 //Jogador está carregando algo
-                if (player.GetKitchenObject() is PlateKitchenObject)
-                {
+                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject)) {
                     //Jogador está segurando um pratinho
-                    PlateKitchenObject plateKitchenObject = player.GetKitchenObject() as PlateKitchenObject;
-                    plateKitchenObject.AddIngredient(GetKitchenObject().GetKitchenObjectSO());
-                    GetKitchenObject().DestroySelf();
+                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO())) {
+                        GetKitchenObject().DestroySelf();
+                    }
+                } else {
+                    // O jogador não está segurando um prato mas sim outra coisa
+                    if (GetKitchenObject().TryGetPlate(out plateKitchenObject)) {
+                        // O counter está "segurando"/está com um prato em cima
+
+                        if (plateKitchenObject.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO())) {
+                            player.GetKitchenObject().DestroySelf();
+                        }
+                    }
                 }
-            }
-            else
-            {
+            } else {
                 //O Jogador não está segurando nada.
                 GetKitchenObject().SetKitchenObjectParent(player);
             }
