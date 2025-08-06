@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d3aa3c8137a944a8fd80694b85b060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 0}
+  baseCounter: {fileID: 6608410585026541100}
   visualGameObjectArray:
   - {fileID: 3691585174622174950}
 --- !u!1 &3691585174622174950 stripped
@@ -237,10 +237,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3945445230941611188, guid: c41b1351d8d46ec419d1f9c359580510, type: 3}
       insertIndex: 1
       addedObject: {fileID: 341663952445155172}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 723726044949243977, guid: c41b1351d8d46ec419d1f9c359580510, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6608410585026541100}
   m_SourcePrefab: {fileID: 100100000, guid: c41b1351d8d46ec419d1f9c359580510, type: 3}
 --- !u!4 &4848015966121693112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3945445230941611188, guid: c41b1351d8d46ec419d1f9c359580510, type: 3}
   m_PrefabInstance: {fileID: 8468620377207319308}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &8402361321909275743 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 80425184681650003, guid: c41b1351d8d46ec419d1f9c359580510, type: 3}
+  m_PrefabInstance: {fileID: 8468620377207319308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9191183136404685637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 723726044949243977, guid: c41b1351d8d46ec419d1f9c359580510, type: 3}
+  m_PrefabInstance: {fileID: 8468620377207319308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6608410585026541100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191183136404685637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ccd1d8f3dcacf24c8b5986583faad6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterTopPoint: {fileID: 8402361321909275743}
