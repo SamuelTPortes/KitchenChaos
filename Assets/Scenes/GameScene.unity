@@ -459,19 +459,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4848015966121693112, guid: cf9484d23ccdf7f4cbd6601877d0da3a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70817757
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4848015966121693112, guid: cf9484d23ccdf7f4cbd6601877d0da3a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4848015966121693112, guid: cf9484d23ccdf7f4cbd6601877d0da3a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7060345
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4848015966121693112, guid: cf9484d23ccdf7f4cbd6601877d0da3a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4848015966121693112, guid: cf9484d23ccdf7f4cbd6601877d0da3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4848015966121693112, guid: cf9484d23ccdf7f4cbd6601877d0da3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -89.826
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4848015966121693112, guid: cf9484d23ccdf7f4cbd6601877d0da3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1575,6 +1575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 534472837}
   - component: {fileID: 534472836}
+  - component: {fileID: 534472838}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1617,6 +1618,18 @@ Transform:
   - {fileID: 1991974965}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534472838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534472835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10376386afbcedc488f7a38ae436e192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &589308472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5140202108650224416, guid: aacfd7782ae22784ba6a339c52120f2e, type: 3}
