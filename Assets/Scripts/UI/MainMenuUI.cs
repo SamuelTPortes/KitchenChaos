@@ -13,14 +13,14 @@ public class MainMenuUI : MonoBehaviour
     {
         playButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene(1);
+            Loader.Load(Loader.Scene.GameScene);
         });
 
         quitButton.onClick.AddListener(() =>
         {
             Application.Quit();
         });
-
+ 
         // !!! NOME DO CONTEUDO: C# DELEGATES !!!
         //
         // é igual a:
