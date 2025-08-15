@@ -5,7 +5,7 @@ public class PlayerSounds : MonoBehaviour {
 
     private Player player;
     private float footsteepTimer;
-    private float footsteepTimerMax = .1f;
+    private float footsteepTimerMax = .25f;
     private void Awake() {
         player = GetComponent<Player>();
     }
