@@ -2,25 +2,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenuUI : MonoBehaviour
-{
+public class MainMenuUI : MonoBehaviour {
 
     [SerializeField] private Button playButton;
     [SerializeField] private Button quitButton;
 
 
-    private void Awake()
-    {
-        playButton.onClick.AddListener(() =>
-        {
+    private void Awake() {
+        playButton.onClick.AddListener(() => {
             Loader.Load(Loader.Scene.GameScene);
         });
 
-        quitButton.onClick.AddListener(() =>
-        {
+        quitButton.onClick.AddListener(() => {
             Application.Quit();
         });
- 
+
         // !!! NOME DO CONTEUDO: C# DELEGATES !!!
         //
         // é igual a:
@@ -29,7 +25,9 @@ public class MainMenuUI : MonoBehaviour
         // }
         //
         // private void playClick(){
-        //
+        // 
         //}
+
+        Time.timeScale = 1f;
     }
 }
