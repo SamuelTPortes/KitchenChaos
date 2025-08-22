@@ -9,12 +9,12 @@ public class GameOverUI : MonoBehaviour {
 
     private void Start() {
         GameManager.Instance.OnStateChanged += GameManager_OnStateChanged;
+        Hide();
     }
 
     private void GameManager_OnStateChanged(object sender, EventArgs e) {
         if (GameManager.Instance.IsGameOver()) {
             Show();
-
             recipesDeliveredText.text = DeliveryManager.Instance.GetSuccessfulRecipesAmount().ToString();
         } else {
             Hide();
