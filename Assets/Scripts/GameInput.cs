@@ -63,6 +63,20 @@ public class GameInput : MonoBehaviour {
         return inputVector;
     }
 
+    public void RebindBinding(Binding binding) {
+        // ESSA PARTE O CODEMONKEY EXPLICA MAIS NO MINUTO 9:33:00
+        playerInputActions.Player.Disable();
+
+        playerInputActions.Player.Move.PerformInteractiveRebinding(1)
+            .OnComplete(callback => {
+                Debug.Log(callback.action.bindings[1].path);
+                Debug.Log(callback.action.bindings[1].overridePath);
+                callback.Dispose();
+                playerInputActions.Player.Move.Enable();
+            })
+            .Start();
+    }
+
     public String GetBindingText(Binding binding) {
         switch (binding) {
             default:
